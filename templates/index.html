@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cartoonize Your Image</title>
+  <style>
+    body {
+      background: #f4f6f8;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      max-width: 700px;
+      margin: 50px auto;
+      padding: 20px;
+      box-shadow: 0px 0px 15px rgba(0,0,0,0.05);
+      border-radius: 8px;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #2d89ef;
+      margin-bottom: 30px;
+    }
+    form {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    input[type=file] {
+      padding: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      transition: border-color 0.3s ease;
+    }
+    input[type=file]:hover {
+      border-color: #2d89ef;
+    }
+    input[type=submit] {
+      margin-left: 15px;
+      background-color: #2d89ef;
+      color: white;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+    input[type=submit]:hover {
+      background-color: #1b5fad;
+    }
+    img {
+      display: block;
+      margin: 15px auto;
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0px 0px 10px rgba(45,137,239,0.4);
+    }
+    .messages {
+      text-align: center;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .error {
+      color: #d9534f;
+    }
+  </style>
+</head>
+<body>
+  <h1>Upload Your Image to Cartoonize</h1>
+
+  <form method="post" enctype="multipart/form-data">
+    <input type="file" name="file" required>
+    <input type="submit" value="Cartoonize">
+  </form>
+
+  <div class="messages">
+    {% if error %}
+      <p class="error">{{ error }}</p>
+    {% endif %}
+  </div>
+
+  {% if input_image %}
+    <h2>Original Image:</h2>
+    <img src="/uploads/{{ input_image }}" alt="Original Image">
+
+    <h2>Cartoonized Image:</h2>
+    <img src="/outputs/{{ output_image }}" alt="Cartoonized Image">
+  {% endif %}
+
+</body>
+</html>
