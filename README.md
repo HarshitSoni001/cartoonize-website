@@ -31,8 +31,3 @@ A Flask-based web app that cartoonizes uploaded images using an AI model (White-
 4. Run the app: `python app.py`
 5. Open http://127.0.0.1:5000 in your browser and upload an image.
 
-## Deployment
-(Optional: Add instructions for Heroku or other platforms if you deploy it.)
-
-## License
-MIT License (or choose another).
