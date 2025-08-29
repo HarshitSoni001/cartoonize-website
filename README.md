@@ -8,9 +8,9 @@ A Flask-based web app that cartoonizes uploaded images using an AI model (White-
 - Simple, user-friendly interface with CSS styling.
 
 ## Screenshots
-![Homepage](screenshots/homepage.png)
-![Upload](screenshots/upload_form.png)
-![Result](screenshots/result.png)
+![Homepage](Screenshots/Homepage.png)
+![Upload](Screenshots/Upload_form.png)
+![Result](Screenshots/Result.png)
 
 
 ## Requirements
